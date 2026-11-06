@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+  Aarush Tyagi – one-page portfolio website
+  HOW TO USE: keep this file named index.html and put it in the SAME folder
+  as photo.jpg and Aarush_Tyagi_Introduction.mp4, then upload all three to
+  your GitHub repo. Turn on GitHub Pages (Settings → Pages) to make it live.
+====================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aarush Tyagi | Data Science & AI Student · Co-Founder, CREOPM</title>
+  <meta name="description" content="Portfolio of Aarush Tyagi: BCA (AI & Data Science) student, data science intern and co-founder of CREOPM Technologies.">
+
+  <style>
+    /* ---------- 1. Brand colours as CSS variables (same palette as the report) ---------- */
+    :root {
+      --ink: #0F1B2D;        /* dark navy: text and dark sections */
+      --blue: #1A8CFF;       /* bright blue: accent on dark backgrounds */
+      --deep: #0B5FC4;       /* deep blue: accent text on light backgrounds */
+      --ice:  #BEDCFF;       /* light blue tint */
+      --cloud: #F6F8FA;      /* page background */
+      --slate: #5B6676;      /* secondary text */
+    }
+
+    /* ---------- 2. Basic reset so every browser starts the same ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }              /* smooth scrolling for menu links */
+    body { font-family: "Inter", "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--cloud); line-height: 1.6; }
+    a { color: var(--deep); }
+    section { padding: 72px 24px; }
+    .wrap { max-width: 980px; margin: 0 auto; }   /* keeps content centred and readable */
+    h1, h2, h3 { font-family: Georgia, "Merriweather", serif; }
+    h2 { font-size: 2rem; margin-bottom: 8px; }
+    .rule { width: 56px; height: 4px; background: var(--blue); margin-bottom: 28px; border-radius: 2px; }
+
+    /* ---------- 3. Top navigation bar ---------- */
+    nav { position: sticky; top: 0; background: var(--ink); z-index: 10; }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .logo { color: #fff; font-family: Georgia, serif; font-weight: bold; letter-spacing: 2px; }
+    nav a { color: var(--ice); text-decoration: none; margin-left: 20px; font-size: .95rem; }
+    nav a:hover { color: #fff; }
+
+    /* ---------- 4. Hero (top banner area) ---------- */
+    .hero { background: linear-gradient(160deg, var(--ink) 40%, #14305c); color: #fff; }
+    .hero .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+    .hero img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 4px solid var(--blue); }
+    .hero h1 { font-size: 2.8rem; line-height: 1.15; }
+    .hero h1 span { color: var(--blue); }          /* blue accent on the surname */
+    .hero .role { color: var(--ice); margin: 10px 0 22px; letter-spacing: 1px; font-weight: 600; }
+    .btn { display: inline-block; padding: 11px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 10px; margin-top: 6px; }
+    .btn.primary { background: var(--blue); color: var(--ink); }
+    .btn.ghost { border: 2px solid var(--blue); color: #fff; }
+
+    /* ---------- 5. Cards used for projects and experience ---------- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid #D0D7DE; border-top: 4px solid var(--blue); border-radius: 8px; padding: 22px; }
+    .card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+    .card p { color: var(--slate); font-size: .96rem; }
+    .tag { display: inline-block; background: #E6F0FB; color: var(--deep); border-radius: 20px; padding: 2px 10px; font-size: .78rem; margin: 10px 6px 0 0; font-weight: 600; }
+
+    /* ---------- 6. Dark sections (experience / contact) ---------- */
+    .dark { background: var(--ink); color: #fff; }
+    .dark .card { background: #14243d; border-color: #24385a; border-top-color: var(--blue); }
+    .dark .card p { color: var(--ice); }
+    .dark a { color: var(--blue); }
+
+    video { width: 100%; max-width: 760px; border-radius: 8px; background: #000; }
+    footer { text-align: center; padding: 24px; color: var(--slate); font-size: .9rem; }
+  </style>
+</head>
+
+<body>
+  <!-- ======================= NAVIGATION ======================= -->
+  <nav>
+    <div class="wrap">
+      <span class="logo">AT · AARUSH TYAGI</span>
+      <div>
+        <!-- href="#id" scrolls to the section with that id -->
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="wrap">
+      <img src="photo.jpg" alt="Portrait of Aarush Tyagi">
+      <div>
+        <h1>Aarush <span>Tyagi</span></h1>
+        <p class="role">DATA SCIENCE & AI STUDENT · CO-FOUNDER, CREOPM TECHNOLOGIES</p>
+        <p>Turning data into insight and ideas into digital products.</p>
+        <br>
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn ghost" href="https://github.com/Aarush2557" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ABOUT ======================= -->
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2><div class="rule"></div>
+      <p>I'm a BCA (Artificial Intelligence & Data Science) student at K.R. Mangalam University in Gurugram, and a co-founder of CREOPM Technologies, where we help creators turn ideas into digital products. I have done data science and analytics internships, working with Python and SQL on collecting, cleaning and preprocessing datasets, and I'm building an AI Resume Analyzer. I'm learning in public and sharing what works and what breaks.</p>
+      <br>
+      <!-- Skill "tags" – each is just a styled <span> -->
+      <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Data Analytics</span>
+      <span class="tag">Data Visualization</span><span class="tag">Data Structures</span>
+      <span class="tag">React</span><span class="tag">Node.js / Express</span><span class="tag">HTML · CSS · JavaScript</span>
+    </div>
+  </section>
+
+  <!-- ======================= PROJECTS ======================= -->
+  <section id="projects" style="background:#fff">
+    <div class="wrap">
+      <h2>Selected projects</h2><div class="rule"></div>
+      <div class="grid">
+        <!-- Card 1: AI Resume Analyzer -->
+        <div class="card">
+          <h3>AI Resume Analyzer</h3>
+          <p>A web app that analyses a resume and helps improve it: PDF upload, ATS scoring, skill extraction, improvement suggestions, job-description matching and interview question generation.</p>
+          <span class="tag">React</span><span class="tag">Express</span><span class="tag">Claude API</span>
+        </div>
+        <!-- Card 2: CREOPM -->
+        <div class="card">
+          <h3>CREOPM Technologies</h3>
+          <p>Co-founded startup that helps creators turn ideas into digital products, from audience insight to product concept and MVP roadmap.</p>
+          <span class="tag">Co-Founder</span><span class="tag">Product</span>
+        </div>
+        <!-- Card 3: Internship data work -->
+        <div class="card">
+          <h3>Internship data work</h3>
+          <p>Collected, cleaned and preprocessed structured and unstructured datasets, and worked with mentors on real-world data science problems.</p>
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Data Cleaning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= EXPERIENCE ======================= -->
+  <section id="experience" class="dark">
+    <div class="wrap">
+      <h2>Experience</h2><div class="rule"></div>
+      <div class="grid">
+        <div class="card"><h3>Co-Founder</h3><p>CREOPM Technologies · from Oct 2026</p></div>
+        <div class="card"><h3>Data Science & Analytics Intern</h3><p>Zidio Development · from Jul 2026</p></div>
+        <div class="card"><h3>Data Scientist Intern</h3><p>SaiKet Systems · Aug–Sep 2026</p></div>
+        <div class="card"><h3>Data Scientist Intern</h3><p>Oasis Infobyte · Jul–Aug 2026</p></div>
+        <div class="card"><h3>Data Scientist Intern</h3><p>Auspify Technologies · Jul–Aug 2026</p></div>
+        <div class="card"><h3>Data Scientist</h3><p>Trank Technologies · internship</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= VIDEO ======================= -->
+  <section id="video">
+    <div class="wrap">
+      <h2>60-second introduction</h2><div class="rule"></div>
+      <!-- The video file must sit in the same folder as this page -->
+      <video controls preload="metadata">
+        <source src="Aarush_Tyagi_Introduction.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT ======================= -->
+  <section id="contact" class="dark">
+    <div class="wrap">
+      <h2>Let's connect</h2><div class="rule"></div>
+      <p>Working on data, AI or creator tools? I'd love to hear from you.</p>
+      <br>
+      <a class="btn primary" href="https://github.com/Aarush2557" target="_blank" rel="noopener">GitHub: Aarush2557</a>
+      <!-- LinkedIn button (opens your profile in a new tab) -->
+      <a class="btn ghost" href="https://www.linkedin.com/in/aarush-tyagi-4a44913a5" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Aarush Tyagi · K.R. Mangalam University</footer>
+</body>
+</html>
